@@ -32,6 +32,15 @@ Language models trained for which the performance is reported in the paper are a
  - [BERT-base-uncased: sap-ai-research/BERT-base-uncased-SCD-ACL2022](https://huggingface.co/sap-ai-research/BERT-base-uncased-SCD-ACL2022)
  - [RoBERTa-base: sap-ai-research/RoBERTa-base-SCD-ACL2022](https://huggingface.co/sap-ai-research/RoBERTa-base-SCD-ACL2022)
 
+Loading the model in Python. Just place in the model name as indicated above, e.g., sap-ai-research/BERT-base-uncased-SCD-ACL2022.
+
+```
+tokenizer = AutoTokenizer.from_pretrained("sap-ai-research/<----Enter Model Name---->")
+
+model = AutoModelWithLMHead.from_pretrained("sap-ai-research/<----Enter Model Name---->")
+```
+
+
 ## Known Issues
 
 ## How to obtain support
