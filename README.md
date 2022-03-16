@@ -34,10 +34,42 @@ Language models trained for which the performance is reported in the paper are a
 
 Loading the model in Python. Just place in the model name as indicated above, e.g., sap-ai-research/BERT-base-uncased-SCD-ACL2022.
 
-```
+```shell
 tokenizer = AutoTokenizer.from_pretrained("sap-ai-research/<----Enter Model Name---->")
 
 model = AutoModelWithLMHead.from_pretrained("sap-ai-research/<----Enter Model Name---->")
+```
+
+With these models one should be able to reproduce the results on the benchmarks are reported in the paper:
+
+For BERT-base-uncased:
+
+```shell
++-------+-------+-------+-------+-------+--------------+-----------------+-------+
+| STS12 | STS13 | STS14 | STS15 | STS16 | STSBenchmark | SICKRelatedness |  Avg. |
++-------+-------+-------+-------+-------+--------------+-----------------+-------+
+| 66.94 | 78.03 | 69.89 | 78.73 | 76.23 |    76.30     |      73.18      | 74.19 |
++-------+-------+-------+-------+-------+--------------+-----------------+-------+
++-------+-------+-------+-------+-------+-------+-------+-------+
+|   MR  |   CR  |  SUBJ |  MPQA |  SST2 |  TREC |  MRPC |  Avg. |
++-------+-------+-------+-------+-------+-------+-------+-------+
+| 79.26 | 84.85 | 93.57 | 89.13 | 85.23 | 83.60 | 74.84 | 84.35 |
++-------+-------+-------+-------+-------+-------+-------+-------+
+```
+
+For RoBERTA-base:
+
+```shell
++-------+-------+-------+-------+-------+--------------+-----------------+-------+
+| STS12 | STS13 | STS14 | STS15 | STS16 | STSBenchmark | SICKRelatedness |  Avg. |
++-------+-------+-------+-------+-------+--------------+-----------------+-------+
+| 63.53 | 77.79 | 69.79 | 80.21 | 77.29 |    76.55     |      72.10      | 73.89 |
++-------+-------+-------+-------+-------+--------------+-----------------+-------+
++-------+-------+-------+-------+-------+-------+-------+-------+
+|   MR  |   CR  |  SUBJ |  MPQA |  SST2 |  TREC |  MRPC |  Avg. |
++-------+-------+-------+-------+-------+-------+-------+-------+
+| 82.17 | 87.76 | 93.67 | 85.69 | 88.19 | 83.40 | 76.23 | 85.30 |
++-------+-------+-------+-------+-------+-------+-------+-------+
 ```
 
 
