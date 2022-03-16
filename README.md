@@ -1,9 +1,8 @@
 # SCD: Self-Contrastive Decorrelation of Sentence Embeddings
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-red.svg)](#python)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-<!--- Register repository https://api.reuse.software/register, then add REUSE badge:
-[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/REPO-NAME)](https://api.reuse.software/info/github.com/SAP-samples/REPO-NAME)
--->
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/acl2022-self-contrastive-decorrelation)](https://api.reuse.software/info/github.com/SAP-samples/acl2022-self-contrastive-decorrelation)
+
 
 #### News
 - **03/16/2022:**  Added arXiv pre-print, provided models for download
