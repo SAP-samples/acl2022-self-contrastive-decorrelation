@@ -72,6 +72,22 @@ For RoBERTA-base:
 +-------+-------+-------+-------+-------+-------+-------+-------+
 ```
 
+## Citations
+If you use this code in your research or want to refer to our work, please cite:
+
+```
+@inproceedings{klein2022scd,
+    title={SCD: Self-Contrastive Decorrelation for Sentence Embeddings},
+     author = "\textbf{Klein, Tassilo}  and
+      Nabi, Moin",
+    booktitle = "Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics",
+    month = may,
+    year = "2022",
+    publisher = "Association for Computational Linguistics (ACL)",
+     note ="\textbf{to appear}
+}
+```
+
 
 ## Known Issues
 
