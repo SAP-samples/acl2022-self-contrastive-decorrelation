@@ -5,6 +5,9 @@
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/REPO-NAME)](https://api.reuse.software/info/github.com/SAP-samples/REPO-NAME)
 -->
 
+#### News
+- **03/16/2022: Provided models for download
+
 ## Description
 This repository **will contain** the source code for our paper **SCD: Self-Contrastive Decorrelation of Sentence Embeddings** to be presented at [ACL2022](https://www.2022.aclweb.org/). The code is in parts based on the code from [Huggingface Tranformers](https://github.com/huggingface/transformers) and the paper [SimCSE: Simple Contrastive Learning of Sentence Embeddings](https://github.com/princeton-nlp/SimCSE).
 
@@ -21,6 +24,13 @@ In this paper, we propose Self-Contrastive Decorrelation, a self-supervised appr
 
 
 ## Download and Installation
+
+
+## Language Models
+
+Language models trained for which the performance is reported in the paper are available at the [Huggingface Model Repository](https://huggingface.co/models):
+ - [BERT-base-uncased: sap-ai-research/BERT-base-uncased-SCD-ACL2022](https://huggingface.co/sap-ai-research/BERT-base-uncased-SCD-ACL2022)
+ - [RoBERTa-base: sap-ai-research/RoBERTa-base-SCD-ACL2022](https://huggingface.co/sap-ai-research/RoBERTa-base-SCD-ACL2022)
 
 ## Known Issues
 
