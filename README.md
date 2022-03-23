@@ -85,7 +85,6 @@ If you use this code in your research or want to refer to our work, please cite:
     month = may,
     year = "2022",
     publisher = "Association for Computational Linguistics (ACL)",
-     note ="\textbf{to appear}
 }
 ```
 
