@@ -25,7 +25,33 @@ In this paper, we propose Self-Contrastive Decorrelation, a self-supervised appr
 
 ## Download and Installation
 
-Source code will be provided soon.
+1. Clone this repository
+```
+git clone https://github.com/SAP-samples/acl2022-self-contrastive-decorrelation scd
+cd scd
+```
+
+2. Install the requirements
+
+```
+pip install -r requirements.txt
+```
+
+3. Download training data
+
+```
+cd data
+sh download_wiki.sh
+cd ..
+```
+
+4. Download evaluation dataset
+
+```
+cd SentEval/data/downstream/
+sh download_dataset.sh
+cd ../../../
+```
 
 ## Language Models
 
