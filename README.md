@@ -54,7 +54,7 @@ cd ../../../
 
 5. :fire: Patching transformers :fire:
 
-Leveraging **multi-dropout** for SCD requires patching the language model of Huggingface transformers. Doing is is rather simple. The portions of the code that have to be changed have been indicated with ```# SCD``` in the source code. Basically, you need to change the following modules in the specific language model file:
+Leveraging **multi-dropout** for SCD requires patching the language model of Huggingface transformers. Doing is is rather simple. The portions of the code that have to be changed have been indicated with ```# SCD``` in the source code. Basically, you need to change the following modules in the specific language model file (with code links for the BERT language model):
 - Embedding(nn.Module)
 https://github.com/SAP-samples/acl2022-self-contrastive-decorrelation/blob/6dc4a006b87313f5f2dcc521cc53d3808eace782/transformers_v4.10/src/transformers/models/bert/modeling_bert.py#L193
 https://github.com/SAP-samples/acl2022-self-contrastive-decorrelation/blob/6dc4a006b87313f5f2dcc521cc53d3808eace782/transformers_v4.10/src/transformers/models/bert/modeling_bert.py#L251
