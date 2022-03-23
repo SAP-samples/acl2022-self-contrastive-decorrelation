@@ -13,7 +13,6 @@ This repository **will contain** the source code for our paper [**SCD: Self-Cont
 
 ### Abstract
 In this paper, we propose Self-Contrastive Decorrelation, a self-supervised approach, which takes an input sentence and optimizes a joint self-contrastive and decorrelation objective, with only standard dropout. This simple method works surprisingly well, achieves comparable results with state-of-the-art methods on multiple benchmarks without using contrastive pairs. This study opens up avenues for efficient self-supervised learning methods that are more resilient to train on a small batch regime than current contrastive methods.
-
 #### Authors:
  - [Tassilo Klein](https://tjklein.github.io/)
  - [Moin Nabi](https://moinnabi.github.io/)
@@ -58,12 +57,16 @@ cd ../../../
 Leveraging **multi-dropout** for SCD requires patching the language model of Huggingface transformers. Doing is is rather simple. The portions of the code that have to be changed have been indicated with ```# SCD``` in the source code. Basically, you need to change the following modules in the specific language model file:
 - Embedding(nn.Module)
 https://github.com/SAP-samples/acl2022-self-contrastive-decorrelation/blob/6dc4a006b87313f5f2dcc521cc53d3808eace782/transformers_v4.10/src/transformers/models/bert/modeling_bert.py#L193
+https://github.com/SAP-samples/acl2022-self-contrastive-decorrelation/blob/6dc4a006b87313f5f2dcc521cc53d3808eace782/transformers_v4.10/src/transformers/models/bert/modeling_bert.py#L251
 - SelfAttention(nn.Module)
 https://github.com/SAP-samples/acl2022-self-contrastive-decorrelation/blob/6dc4a006b87313f5f2dcc521cc53d3808eace782/transformers_v4.10/src/transformers/models/bert/modeling_bert.py#L288
+https://github.com/SAP-samples/acl2022-self-contrastive-decorrelation/blob/6dc4a006b87313f5f2dcc521cc53d3808eace782/transformers_v4.10/src/transformers/models/bert/modeling_bert.py#L390
 - SelfOutput(nn.Module)
 https://github.com/SAP-samples/acl2022-self-contrastive-decorrelation/blob/6dc4a006b87313f5f2dcc521cc53d3808eace782/transformers_v4.10/src/transformers/models/bert/modeling_bert.py#L427
+https://github.com/SAP-samples/acl2022-self-contrastive-decorrelation/blob/6dc4a006b87313f5f2dcc521cc53d3808eace782/transformers_v4.10/src/transformers/models/bert/modeling_bert.py#L440
 - BertOutput(nn.Module)
-https://github.com/SAP-samples/acl2022-self-contrastive-decorrelation/blob/6dc4a006b87313f5f2dcc521cc53d3808eace782/transformers_v4.10/src/transformers/models/bert/modeling_bert.py#L531
+https://github.com/SAP-samples/acl2022-self-contrastive-decorrelation/blob/6dc4a006b87313f5f2dcc521cc53d3808eace782/transformers_v4.10/src/transformers/models/bert/modeling_bert.py#L529
+https://github.com/SAP-samples/acl2022-self-contrastive-decorrelation/blob/6dc4a006b87313f5f2dcc521cc53d3808eace782/transformers_v4.10/src/transformers/models/bert/modeling_bert.py#L544
 
 The source code provided is compatible with version 4.10.0. Later versions should be pretty much identical in what needs to be adapted. In order to avoid complications, I recommend creating your existing environment, such that the modifications of transformer code have no effect on other projects (although, technically there should not be any issue). Information on cloning your environment with conda can be found [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
 
