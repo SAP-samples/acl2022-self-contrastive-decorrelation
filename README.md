@@ -75,13 +75,14 @@ pip install -e .
 ```
 ## Training and Evaluation
 
-## Language Models
-
-1. Training BERT
+1. Training BERT with settings as in paper
 
 ```
 python train.py --do_train --load_best_model_at_end --fp16 --overwrite_output_dir --description=SCD --eval_steps=250 --evaluation_strategy=steps --hidden_dropout_prob=0.05 --hidden_dropout_prob_noise=0.155 --learning_rate=3e-05 --max_seq_length=32 --metric_for_best_model=sickr_spearman --model_name_or_path=bert-base-uncased --num_train_epochs=1 --output_dir=result --per_device_train_batch_size=192 --report_to=wandb --save_total_limit=0 --task_alpha=1 --task_beta=0.005225 --task_lambda=0.012 --temp=0.05 --train_file=data/wiki1m_for_simcse.txt
 ```
+
+**Note**: If you want to use a language model that has a different embedding dimensionality as BERT-base-uncased/RoBERTa-base (=784), you also need to change the projector input dimensionality accordingly using the argument: ```--embedding_dim```
+
 
 2. Convert model to Huggingface format
 ```
@@ -98,6 +99,8 @@ or if you also want the transfer tasks to be evaluated (takes a bit of time)
 ```
 python evaluation.py --pooler cls_before_pooler --task_set full --mode test --model_name_or_path result/<model directory>
 ```
+
+## Language Models
 
 Language models trained for which the performance is reported in the paper are available at the [Huggingface Model Repository](https://huggingface.co/models):
  - [BERT-base-uncased: sap-ai-research/BERT-base-uncased-SCD-ACL2022](https://huggingface.co/sap-ai-research/BERT-base-uncased-SCD-ACL2022)
