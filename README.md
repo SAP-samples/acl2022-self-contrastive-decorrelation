@@ -53,7 +53,7 @@ sh download_dataset.sh
 cd ../../../
 ```
 
-5. Patching transformers
+5. :fire: Patching transformers :fire:
 
 Leveraging **multi-dropout** for SCD requires patching the language model of Huggingface transformers. Doing is is rather simple. The source code provided is compatible with version 4.10.0. Later versions should be pretty much identical in what needs to be adapted. In order to avoid complications, I recommend creating your existing environment, such that the modifications of transformer code have no effect on other projects (although, technically there should not be any issue). Information on cloning your environment with conda can be found [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
 
@@ -73,6 +73,7 @@ cp transformers_v4.10/src/transformers/models/roberta/modeling_roberta.py ~/scd_
 cd scd_transformers
 pip install -e .
 ```
+## Training and Evaluation
 
 ## Language Models
 
