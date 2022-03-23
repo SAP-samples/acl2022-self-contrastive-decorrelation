@@ -68,6 +68,11 @@ https://github.com/SAP-samples/acl2022-self-contrastive-decorrelation/blob/6dc4a
 https://github.com/SAP-samples/acl2022-self-contrastive-decorrelation/blob/6dc4a006b87313f5f2dcc521cc53d3808eace782/transformers_v4.10/src/transformers/models/bert/modeling_bert.py#L529
 https://github.com/SAP-samples/acl2022-self-contrastive-decorrelation/blob/6dc4a006b87313f5f2dcc521cc53d3808eace782/transformers_v4.10/src/transformers/models/bert/modeling_bert.py#L544
 
+
+To activate training with multi-dropout a couple of flags have to be set in the training script:
+
+https://github.com/SAP-samples/acl2022-self-contrastive-decorrelation/blob/6824cffb99202b0eb6cdc5cad5eeede9f9da74e3/train.py#L430
+
 The source code provided is compatible with version 4.10.0. Later versions should be pretty much identical in what needs to be adapted. In order to avoid complications, I recommend creating your existing environment, such that the modifications of transformer code have no effect on other projects (although, technically there should not be any issue). Information on cloning your environment with conda can be found [here](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
 
 5.1. Clone Hugging Face transformers v.4.10.0 to the folder 'scd_transformers'
