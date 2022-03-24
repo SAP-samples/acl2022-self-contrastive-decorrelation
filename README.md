@@ -5,7 +5,7 @@
 
 
 #### News
-- **03/23/2022:** Provided source code
+- **03/23/2022:** :confetti_ball: Source code provided :tada:
 - 03/16/2022:  Added arXiv pre-print, provided models for download
 
 ## Description
