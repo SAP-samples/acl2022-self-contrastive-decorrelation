@@ -89,8 +89,8 @@ def _model_unwrap(model: nn.Module) -> nn.Module:
 from transformers.optimization import Adafactor, AdamW, get_scheduler
 import copy
 # Set path to SentEval
-PATH_TO_SENTEVAL = '/home/ubuntu/local_SimCSE/SentEval'
-PATH_TO_DATA = '/home/ubuntu/local_SimCSE/SentEval/data'
+PATH_TO_SENTEVAL = './SentEval'
+PATH_TO_DATA = './SentEval/data'
 
 # Import SentEval
 sys.path.insert(0, PATH_TO_SENTEVAL)
