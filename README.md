@@ -26,6 +26,13 @@ In this paper, we propose Self-Contrastive Decorrelation, a self-supervised appr
 - [PyTorch](https://pytorch.org/)
 
 
+## Related work
+[![arXiv](https://img.shields.io/badge/arXiv-2109.05105-29d634.svg)](https://arxiv.org/abs/2211.04928)
+
+Check out the pre-print of latest work for sentence similarity that facilitates learning embeddings even with minimal amounts of data: "_**miCSE**: Mutual Information Contrastive Learning for Low-shot Sentence Embeddings_" 
+
+
+
 ## Download and Installation
 
 1. Clone this repository
