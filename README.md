@@ -27,7 +27,7 @@ In this paper, we propose Self-Contrastive Decorrelation, a self-supervised appr
 
 
 ## Related work
-[![arXiv](https://img.shields.io/badge/arXiv-2109.05105-29d634.svg)](https://arxiv.org/abs/2211.04928) ![Download Model](https://img.shields.io/badge/-HuggingFace%20Transformer-orange)
+[![arXiv](https://img.shields.io/badge/arXiv-2109.05105-29d634.svg)](https://arxiv.org/abs/2211.04928) [![Download Model](https://img.shields.io/badge/-HuggingFace%20Transformer-orange)]([https://huggingface.co/sap-ai-research/miCSE](https://huggingface.co/sap-ai-research/miCSE))
 
 Check out the pre-print of latest work for sentence similarity that facilitates learning embeddings even with minimal amounts of data: "_**miCSE**: Mutual Information Contrastive Learning for Low-shot Sentence Embeddings_" 
 
