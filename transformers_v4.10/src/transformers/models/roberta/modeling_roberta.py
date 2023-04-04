@@ -161,7 +161,7 @@ class RobertaEmbeddings(nn.Module):
         # SCD: BEGIN - multi-dropout
         if self.training:
             # STANDARD
-            if self.config.single_dropout:
+            if not self.config.multi_dropout:
                 embeddings = self.dropout[0](embeddings)
 
             else:
@@ -317,7 +317,7 @@ class RobertaSelfAttention(nn.Module):
         if self.training:
             
             # STANDARD
-            if self.config.single_dropout:
+            if not self.config.multi_dropout:
                 attention_probs = self.dropout[0](attention_probs)
 
             else:
@@ -371,7 +371,7 @@ class RobertaSelfOutput(nn.Module):
         if self.training:
             
             # STANDARD
-            if self.config.single_dropout:
+            if not self.config.multi_dropout:
                 hidden_states = self.dropout[0](hidden_states)
             else:
                 hidden_states_clone = einops.rearrange(hidden_states, "(h i) j t -> h i j t", i=len(self.dropout)).clone()
@@ -480,7 +480,7 @@ class RobertaOutput(nn.Module):
         if self.training:
             
             # STANDARD
-            if self.config.single_dropout:
+            if not self.config.multi_dropout:
                 hidden_states = self.dropout[0](hidden_states)
             else:
                 hidden_states_clone = einops.rearrange(hidden_states, "(h i) j t -> h i j t", i=len(self.dropout)).clone()
@@ -616,7 +616,6 @@ class RobertaEncoder(nn.Module):
             layer_head_mask = head_mask[i] if head_mask is not None else None
             past_key_value = past_key_values[i] if past_key_values is not None else None
 
-            self.config.single_dropout = True
             if getattr(self.config, "gradient_checkpointing", False) and self.training:
 
                 if use_cache:
