@@ -9,7 +9,7 @@
 - 03/16/2022:  Added arXiv pre-print, provided models for download
 
 ## Description
-This repository **will contain** the source code for our paper [**SCD: Self-Contrastive Decorrelation of Sentence Embeddings**](http://arxiv.org/abs/2203.07847) to be presented at [ACL2022](https://www.2022.aclweb.org/). The code is in parts based on the code from [Huggingface Tranformers](https://github.com/huggingface/transformers) and the paper [SimCSE: Simple Contrastive Learning of Sentence Embeddings](https://github.com/princeton-nlp/SimCSE).
+This repository contains the source code for our paper [**SCD: Self-Contrastive Decorrelation of Sentence Embeddings**](http://arxiv.org/abs/2203.07847) to be presented at [ACL2022](https://www.2022.aclweb.org/). The code is in parts based on the code from [Huggingface Tranformers](https://github.com/huggingface/transformers) and the paper [SimCSE: Simple Contrastive Learning of Sentence Embeddings](https://github.com/princeton-nlp/SimCSE).
 
 ### Abstract
 
